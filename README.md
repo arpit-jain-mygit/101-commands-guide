@@ -9,3 +9,7 @@ Personal command notes for problems I solved once and do not want to solve again
 ## Google
 
 - [Google OAuth local setup](google/google-oauth-local-setup.md)
+
+## API Keys
+
+- [Create a Gemini API key for a backend app](api-keys/gemini-api-key.md)
