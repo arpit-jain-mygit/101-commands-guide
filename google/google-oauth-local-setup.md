@@ -68,6 +68,24 @@ Use a name like:
 Local Google OAuth
 ```
 
+Add these under:
+
+```text
+Authorized JavaScript origins
+```
+
+For local testing:
+
+```text
+http://localhost:4200
+```
+
+For the deployed Vercel app, add the exact production origin you open in the browser, for example:
+
+```text
+https://i-want-to-create-a-web-omega.vercel.app
+```
+
 Add this exact redirect URI:
 
 ```text
@@ -90,5 +108,6 @@ Restart FastAPI and try the login flow again.
 ## Notes
 
 - The app should use `prompt=select_account consent` so Google shows the account chooser.
+- If the deployed frontend is on Vercel, the Vercel origin must be added to `Authorized JavaScript origins` or Google may show `Error 401: invalid_client` with `no registered origin`.
 - If Google says `Missing required parameter: client_id`, the client ID is blank or missing in `.env`.
 - If the app returns a local `503`, the API is intentionally blocking login until the OAuth credentials are configured.
